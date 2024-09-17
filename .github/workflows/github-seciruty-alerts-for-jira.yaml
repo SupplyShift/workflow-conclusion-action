@@ -1,0 +1,11 @@
+name: GitHub Security Alerts for Jira
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  syncSecurityAlerts:
+    uses: SupplyShift/common-github-actions/.github/workflows/github-security-alerts-for-jira-reusable.yaml@main
+    secrets: inherit
